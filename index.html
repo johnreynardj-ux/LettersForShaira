@@ -2,115 +2,92 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Letters for Shaira</title>
+<title>For Shaii</title>
 
 <style>
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #ffd6e8, #ffeef5);
-    overflow-x: hidden;
-}
-
-/* Floating hearts */
-.heart {
-    position: fixed;
-    bottom: -20px;
-    color: rgba(255, 0, 100, 0.35);
-    animation: float 10s linear infinite;
-}
-@keyframes float {
-    from { transform: translateY(0); opacity: 1; }
-    to { transform: translateY(-120vh); opacity: 0; }
+    font-family: Georgia, serif;
+    background-color: #ffe6eb;
+    background-image:
+        radial-gradient(#ff9aa2 1px, transparent 1px),
+        radial-gradient(#ff9aa2 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
 }
 
 .container {
     max-width: 900px;
-    margin: auto;
-    padding: 50px 20px;
+    margin: 40px auto;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
-    color: #ff3366;
+    color: #b3003b;
     margin-bottom: 40px;
 }
 
-/* Envelope */
 .envelope {
-    background: #ff5c8a;
-    border-radius: 15px;
-    padding: 25px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    margin-bottom: 35px;
     cursor: pointer;
-    text-align: center;
-    color: white;
-    font-size: 22px;
-    margin-bottom: 25px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    overflow: hidden;
     transition: transform 0.3s;
 }
+
 .envelope:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
-/* Letter */
+.envelope-title {
+    background: #ffccd5;
+    padding: 20px;
+    font-size: 22px;
+    color: #800020;
+}
+
 .letter {
     display: none;
-    background: white;
-    border-radius: 20px;
     padding: 35px;
-    margin-bottom: 50px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    animation: open 0.6s ease;
-}
-@keyframes open {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    text-align: left;
+    white-space: pre-wrap;
+    line-height: 1.8;
+    color: #333;
 }
 
-.letter h2 {
-    text-align: center;
-    color: #ff3366;
+.heart {
+    position: fixed;
+    font-size: 20px;
+    color: #ff4d6d;
+    animation: float 6s infinite ease-in;
+    pointer-events: none;
 }
 
-.letter p {
-    white-space: pre-line;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-.signature {
-    margin-top: 30px;
-    text-align: right;
-    font-weight: bold;
+@keyframes float {
+    from {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<script>
-for (let i = 0; i < 25; i++) {
-    let heart = document.createElement("div");
-    heart.className = "heart";
-    heart.innerHTML = "❤️";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
-    heart.style.fontSize = (15 + Math.random() * 25) + "px";
-    document.body.appendChild(heart);
-}
-</script>
-
 <div class="container">
-<h1>💌 For Shaira 💌</h1>
+<h1>💌 Letters for You, Shaii 💌</h1>
 
 <!-- LETTER 1 -->
-<div class="envelope" onclick="toggleLetter('l1')">📩 Open Letter 1</div>
-<div class="letter" id="l1">
-<h2>Letter 1</h2>
-<p>
+<div class="envelope" onclick="toggleLetter('letter1')">
+<div class="envelope-title">💗 Open Letter 1</div>
+<div class="letter" id="letter1">
 Hello shaii
 Kumusta na? Okay paba ang life? Haha mangumusta lang ko basin nagkaniunsa naka diha btw ay mag put kog link diri sa spotify, para while gabasa ka nay music2, okay? Haha wajud ko ka expect ay nga mag write nasad kog letter nimo I thought dinako maka buhat karon nga year since ni less atong interaction, pero okay rana oy busy man jud na pag college na daghan kayp buhaton, okay rato akong gi send na English version? Ofcourse ai to pero gi revision nako since lain pud no og ai tanan jusmiyo, I try gani nag ai detector 100% human written na haha.
 
@@ -129,38 +106,63 @@ Now na nakabalo nako sa mga reason nganong ni stay ko, na motivate nakog-ayo nga
 So ayaw kabalaka ha shaii, dili ni para mangayo kog tubag karon dayun. Gusto ra jud nako nga kabalo ka unsa ko ka true sa akong feelings, ug unsa ka ka special para sa akoa.
 
 Happy New Year, Shaii! 🥳✨ I love you.
-</p>
-<p class="signature">— John</p>
+</div>
 </div>
 
 <!-- LETTER 2 -->
-<div class="envelope" onclick="toggleLetter('l2')">📩 Open Letter 2</div>
-<div class="letter" id="l2">
-<h2>Letter 2</h2>
-<p>
+<div class="envelope" onclick="toggleLetter('letter2')">
+<div class="envelope-title">💞 Open Letter 2</div>
+<div class="letter" id="letter2">
 Hello Shaii
-This letter may be long, but I hope you’ll read it knowingly that it comes from a place of sincerity and honesty. We’ve shared years of friendship and memories, and even though the memories are quite short it still memorable for me.
+This letter may be long, but I hope you’ll read it knowingly that it comes from a place of sincerity and honesty. We’ve shared years of friendship and memories, and even though the memories are quite short it still memorable for me, also life took us in different directions, there are feelings I never truly learned how to express properly until now.
 
-Writing this was hard for me cause i spent a lot of time thinking about whether I should do this. This letter is not meant to make you uncomfy nor is it meant to expect anything from you.
+Writing this was hard for me cause i spent a lot of time thinking about whether I should do this, especially because of our past and the things I learned from it. I want you to know that this letter is not meant to make you uncomfy nor is it meant to expect anything from you. More than anything, it’s simply my way of being honest and respectfully.
 
-As this year comes to an end and a new one begins i realized that some feelings don’t fade just because time passes.
+As this year comes to an end and a new one begins i realized that some feelings don’t fade just because time passes, i carried them quietly choosing to respect your space while still appreciating you from afar. This letter is my way of finally putting those thoughts into words not to change anything between us, but to be true to myself and to you.
 
-There were times when I chose to admire you from a distance instead of stepping too close.
+After everything that happened before, I learned how important it is to be more careful not just with words, but with actions and intentions, what we went through taught me a lot about boundaries, patience, and respect. Since then i’ve tried my best to grow as a person even in the quiet moments when you probably never noticed and if you’re wondering while I’m so good at English I’m using translator this is the English version and the original is finish last month, I’m doing it because I want to be formal with you.
 
-Finally, i want to say the one thing I’ve been holding back for so long. I really, really, really like you, Shaii.
+There were times when I chose to admire you from a distance instead of stepping too close, like during our junior high prom there was a moment when I wanted to ask you for a dance, i had imagined it in my head, rehearsed it in my heart, but when I saw you with someone else, I realized that sometimes caring also means stepping back. So I went home early that night, not because I was upset with you, but because I didn’t want to interfere with your happiness.
 
-Thank you for taking the time to read this.
-</p>
-<p class="signature">— Janjan</p>
+Then came Grade 11, when I unexpectedly saw you again while we were taking our ID’s picture. It was such a simple moment yet it stayed with me longer than i expected. You looked calm, and genuinely beautiful in a way that didn’t need effort. That moment reminded me why i admired you not just for how you look, but for the quiet presence you carry. I realized then that my feelings never truly disappeared but they had only learned how to wait.
+
+When we started talking again, I became more mindful, i also made sure to respect your space, your time, and your comfort. Even if conversations were short, I appreciated them. I never expected constant replies or long talks just knowing that I could still talk to you meant a lot to me. Sometimes, caring quietly felt better than risking making you uncomfy again.
+
+In Grade 12, I had this small plan in my heart to give you a flower on your graduation day. It wasn’t meant to be a grand gesture just something simple and sincere. Unfortunately, things didn’t go as planned that day. At first, I felt disappointed, but later I learned to accept it, i told myself that not everything meaningful has to happen right away and maybe some things are meant to wait until the right time.
+
+Now that we’re both in college i still see the same person I’ve admired for years still kind, still funny, still beautiful in ways that go beyond appearance. Even if we don’t talk often, even if I’m usually the one who starts the conversation, i don’t mind, i understand that everyone has their own life, their own priorities. Liking you never felt like a burden to me it felt like a choice I made with patience and understanding.
+
+I guess what I’m trying to say is that my feelings were never loud or demanding. They stayed with me quietly through different chapters of my life, i didn’t hold onto them because I expected something in return but because they felt real and sincere. You became someone I admired not only for who you are but for how you made me want to become better, calmer, and more respectful as a person.
+
+Finally, i want to say the one thing I’ve been holding back for so long. I really, really, really like you, Shaii. It may sound simple maybe even a little silly, but it’s the truth. These feelings are real and they stayed with me longer than I ever expected.
+
+This letter is my way of expressing what I feel, sumo siya paminawon, but writing has always been the only way I know how to show my love—calmly, honestly, and without pressure, and even if nothing changes, even if this stays one-sided I don’t regret it. I would still choose to feel this way because it’s sincere.
+
+I don’t expect anything from you. I just wanted you to know how special you are to me, and how much respect and admiration I carry for you. If someday you read another letter like this from me, know that it comes from the same place from a heart that chose patience, understanding, and honesty.
+
+Thank you for taking the time to read this, and I hope you achieve the results you want and ill be rooting for you, waiting for you, and helping you throughout hard times, also I pray that you will be healthy and energetic, and please don’t hesitate to choose someone you love and care because you have your own freedom.
+
+— Janjan
+</div>
 </div>
 
 </div>
 
 <script>
 function toggleLetter(id) {
-    const letter = document.getElementById(id);
-    letter.style.display = letter.style.display === "block" ? "none" : "block";
+    const el = document.getElementById(id);
+    el.style.display = el.style.display === "block" ? "none" : "block";
 }
+
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 7000);
+}, 450);
 </script>
 
 </body>
